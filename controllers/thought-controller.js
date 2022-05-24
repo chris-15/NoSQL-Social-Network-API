@@ -112,7 +112,13 @@ const thoughtController = {
           { $pull: { reactions: { reactionId: params.reactionId }}},
           { new: true }
       )
-        .then(dbThoughtData => res.json(dbThoughtData))
+        .then(dbThoughtData => {
+           //if no thought found
+           if(!dbThoughtData) {
+            res.status(404).json({ message: "No thought with this id found!" })
+        }
+          res.json(dbThoughtData)
+        })
         .catch( err => res.status(400).json(err))
   }
 };
