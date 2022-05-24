@@ -36,7 +36,7 @@ const thoughtController = {
       });
   },
 
-  //add/create a though POST /api/thoughts/:userId
+  //add/create a thought POST /api/thoughts/:userId
   // "thoughtText", "username", "userId"
   createThought({ params, body }, res) {
     console.log(body);
