@@ -101,7 +101,7 @@ const thoughtController = {
             }
             res.json(dbThoughtData)
         })
-        .catch(err => res.satus(400).json(err));
+        .catch(err => res.status(400).json(err));
   },
 
   // /api/thoughts/:thoughtId/reactions/:reactionId
