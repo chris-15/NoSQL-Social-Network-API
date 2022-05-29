@@ -45,7 +45,7 @@ const userController = {
       })
       .catch((err) => {
         console.log(err);
-        res.satuts(400).json(err);
+        res.status(400).json(err);
       });
   },
 
@@ -55,7 +55,7 @@ const userController = {
       .then((dbUserData) => res.json(dbUserData))
       .catch((err) => {
         console.log(err);
-        res.satuts(400).json(err);
+        res.status(400).json(err);
       });
   },
 
